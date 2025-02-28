@@ -1,0 +1,28 @@
+apiVersion: everest.percona.com/v1alpha1
+kind: BackupStorage
+metadata:
+  name: s3
+  namespace: everest
+spec:
+  bucket: mayank-everest-test
+  credentialsSecretName: s3
+  endpointURL: https://s3.us-west-2.amazonaws.com
+  region: us-west-2
+  type: s3
+---
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: s3
+  namespace: everest
+spec:
+  encryptedData:
+    AWS_ACCESS_KEY_ID: AgAJpYlZ2UenhPNSMsL5HnwKf04nWg3NS5zR7l+cbd2capwShSkd9nlowG/NEBaXSYj7TLnUztPcowsVXBOwEJEKZGH/cnqhZjThF3I6XXqS9aVdUqwKTy1oMkXB8BAds7QdpBd7EpKtUNxd9xtPOp8DKZ/+2DVr/Edz4t1uw5LcMFEPp/pyXDwR4nkLROjJ6mCLb97OwuCkpnAwafCCPCVwoPjm6S7/4X3nysgcA23otf7Eoiiy4+hGtr8H4WTn6lI5Zm3s1gse7nrgLE0H0t466/6Po7Z7argDVzEClNGiEcZPuq4yFHlznQhGI9X7TEpZvrF6/kHgJ4sd1WXYMmm0PDlOWU0IpiHNVbcjFsIlkgHq1RKqlB3579H21c0xA6Vea+C43dzFk35D59j6TxRqerMxrDs3N86kc5R3olpl82PJKuu+X/TYWXoBgzlEaGZ6U2T1jwYI/Jw4O12nR4JJdazcL/HxhWCzTXS9hbaE5V4iO4FJDbiU9k5S50G3PqNqR9Id9q2N7jf60evoFz5aTLPsTcHXJvntkMOCOW6VX5MwH+fC4wDJI/jhup3slJT5LS6Wgu3sXlNBQuRxZue1HF4wEk6n5/43pVDUOB5Ufvmx9LSvbitIeHY8EPHmjnz4KPmDAp3AfgtJ/d7n3fQqg9SR/y+uW258kRx7Q4qECRhYayaRTvmqMqFJZhOTpeD4gHF0b4b6AmQe3MVO0+1abz4Ehw==
+    AWS_SECRET_ACCESS_KEY: AgBZvo58hhaPWPau+R1SZPM6Q9xj9xICrMviQWOdMXMqHibICdXMRBFeONWqsTqOTb0LZAW2LfZvX/Y6a4/w+6QcZrvL0EDeWk4pY4g40j5V+YvAGiObZf4xxIi8i7QLaK4tHS/g8AdTQ2KemlCboEwWIRbu1nsap4rDar1SCXltKE49t94FkUyjIxGZN/7kLiXuwaWOKcMYJ3hOht/Rjh5ZJiBLztvDSBmnAGLF5Lw3rahpOFFO838ymkMrXtbkKC17oQl/mGgiiB9/iQPH563Dj7jLwvJkYfwVu90qSqKGlvRNkf3BZGy4UIJNEZREDWSa6LQJAG/yvzUMFm/V+xO4rz+TsWxuMtSJwvYDINu45G/TzHZBMLLO4/eIGAAY8EXmsR4+qhxWo+2p4/yWN53AiuKe7f2XBOQVr3ud9N0K/lJwESX6vLjW3hQ1kO9XTRlPzh9N/uV1vt6ibTgrlG/Y26qYn7jVg2oIOrNm6IVccbYti2q5HAf3tB5m3bBKYGlNerEYZRF2hYrgFadMzkBNk55s2rWucAZgjFdjCMcv9RSakQ/dVHldI7tYBmGAIt5/XX+z6fAnEfu/PnuwJWZsL46we1djfWwIqZ3j9gqRt3yisCJ+cvGyaoH+OZlN0XYyhkhHQN+uy5pHkWbpx8wZdokS6DAvoqI5ccqgVgv68zRstSVHCtyjiecPT3nkL21ZSESz68Dis1UMu5C0/zHqxyINYORkX1kD/lOtLVhyRpIDI4oj4LcL
+  template:
+    metadata:
+      creationTimestamp: null
+      name: s3
+      namespace: everest
+    type: Opaque
