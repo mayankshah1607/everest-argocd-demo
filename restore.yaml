@@ -3,6 +3,8 @@ kind: DatabaseClusterRestore
 metadata:
   name: my-mongodb-restore
   namespace: everest
+  labels:
+    clusterName: my-mongodb
 spec:
   dataSource:
     dbClusterBackupName: my-mongodb-backup
