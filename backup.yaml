@@ -5,4 +5,4 @@ metadata:
   namespace: everest
 spec:
   backupStorageName: s3
-  dbClusterName: my-epic-mongodb
+  dbClusterName: my-mongodb
