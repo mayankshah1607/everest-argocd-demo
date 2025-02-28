@@ -3,6 +3,8 @@ kind: DatabaseClusterBackup
 metadata:
   name: my-mongodb-backup
   namespace: everest
+  labels:
+    clusterName: my-mongodb
 spec:
   backupStorageName: s3
   dbClusterName: my-mongodb

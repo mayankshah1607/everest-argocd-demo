@@ -1,0 +1,9 @@
+apiVersion: everest.percona.com/v1alpha1
+kind: DatabaseClusterRestore
+metadata:
+  name: my-mongodb-restore
+  namespace: everest
+spec:
+  dataSource:
+    dbClusterBackupName: my-mongodb-backup
+  dbClusterName: my-mongodb
