@@ -13,7 +13,7 @@ spec:
     - backupStorageName: s3
       enabled: true
       name: my-backup-schedule
-      schedule: 54 * * * *
+      schedule: 55 * * * *
   engine:
     replicas: 3
     resources:
