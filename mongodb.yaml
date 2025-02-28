@@ -1,24 +1,20 @@
 apiVersion: everest.percona.com/v1alpha1
 kind: DatabaseCluster
 metadata:
-  name: mongodb-basic
+  name: my-mongodb
   namespace: everest
 spec:
-  backup:
-    enabled: false
-    # pitr:
-    #   backupStorageName: s3
+  backup: 
+    # schedules:
+    # - backupStorageName: s3
     #   enabled: true
-    schedules:
-    - backupStorageName: s3
-      enabled: true
-      name: my-backup-schedule
-      schedule: 55 * * * *
+    #   name: my-backup-schedule
+    #   schedule: 55 * * * *
   engine:
-    replicas: 3
+    replicas: 1
     resources:
       cpu: "1"
-      memory: 4G
+      memory: 1G
     storage:
       class: standard-rwo
       size: 5Gi
