@@ -1,0 +1,8 @@
+apiVersion: everest.percona.com/v1alpha1
+kind: DatabaseClusterBackup
+metadata:
+  name: my-mongodb-backup
+  namespace: everest
+spec:
+  backupStorageName: s3
+  dbClusterName: my-epic-mongodb
