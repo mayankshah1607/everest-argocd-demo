@@ -24,3 +24,5 @@ spec:
       size: 5Gi
     type: pxc
     version: 8.0.36-28.1
+  monitoring:
+    resources: {}

@@ -13,7 +13,7 @@ spec:
     - backupStorageName: s3
       enabled: true
       name: my-backup-schedule
-      schedule: 53 * * * *
+      schedule: 54 * * * *
   engine:
     replicas: 3
     resources:
@@ -24,3 +24,5 @@ spec:
       size: 5Gi
     type: psmdb
     version: 7.0.14-8
+  monitoring:
+    resources: {}
