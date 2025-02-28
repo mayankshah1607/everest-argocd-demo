@@ -5,7 +5,7 @@ metadata:
   namespace: everest
 spec:
   backup:
-    enabled: true
+    enabled: false
     # pitr:
     #   backupStorageName: s3
     #   enabled: true
