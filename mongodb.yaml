@@ -9,11 +9,11 @@ spec:
     # pitr:
     #   backupStorageName: s3
     #   enabled: true
-    # schedules:
-    # - backupStorageName: s3
-    #   enabled: true
-    #   name: backup-r33
-    #   schedule: 7 * * * *
+    schedules:
+    - backupStorageName: s3
+      enabled: true
+      name: my-backup-schedule
+      schedule: 53 * * * *
   engine:
     replicas: 3
     resources:
