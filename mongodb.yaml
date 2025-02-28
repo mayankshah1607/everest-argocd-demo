@@ -12,10 +12,10 @@ spec:
     #   name: my-backup-schedule
     #   schedule: 55 * * * *
   engine:
-    replicas: 1
+    replicas: 3
     resources:
       cpu: "1"
-      memory: 1G
+      memory: 4G
     storage:
       class: standard-rwo
       size: 5Gi
