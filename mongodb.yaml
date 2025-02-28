@@ -4,7 +4,8 @@ metadata:
   name: my-mongodb
   namespace: everest
 spec:
-  backup: {}
+  backup:
+    enabled: false
     # schedules:
     # - backupStorageName: s3
     #   enabled: true
