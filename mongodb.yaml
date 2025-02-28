@@ -13,7 +13,7 @@ spec:
     # - backupStorageName: s3
     #   enabled: true
     #   name: backup-r33
-    #   schedule: 30 * * * *
+    #   schedule: 7 * * * *
   engine:
     replicas: 3
     resources:
@@ -21,6 +21,6 @@ spec:
       memory: 4G
     storage:
       class: standard-rwo
-      size: 25Gi
+      size: 5Gi
     type: psmdb
     version: 7.0.14-8
